@@ -1,9 +1,20 @@
 package Decorators;
 
-public abstract class DeviceDecorator {
-    protected Object device;
+import Devices.Device;
 
-    public DeviceDecorator(Object device) {
+public abstract class DeviceDecorator implements Device {
+    private Device device;
+
+    public DeviceDecorator(Device device) {
         this.device = device;
+    }
+
+    @Override
+    public void on() {
+        device.on();
+    }
+
+    public void off() {
+        device.off();
     }
 }

@@ -1,23 +1,29 @@
 package Decorators;
 
-import Devices.Light;
+import Devices.Device;
 
 public class SecurityDecorator extends DeviceDecorator {
-    public SecurityDecorator(Object device) {
+
+    public SecurityDecorator(Device device) {
         super(device);
     }
 
-    public void on() {
+    private boolean verifyUser() {
         System.out.println("[Security Check] User verified");
-        if (device instanceof Light) {
-            ((Light) device).on();
+        return true;
+    }
+
+    @Override
+    public void on() {
+        if (verifyUser()) {
+            super.on(); // выполняем действие устройства после проверки
         }
     }
 
+    @Override
     public void off() {
-        System.out.println("[Security Check] User verified");
-        if (device instanceof Light) {
-            ((Light) device).off();
+        if (verifyUser()) {
+            super.off(); // выполняем действие устройства после проверки
         }
     }
 }

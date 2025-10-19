@@ -1,13 +1,13 @@
 package Facade;
 
 import Devices.Light;
-import Devices.Thermostat;
 import Devices.SecuritySystem;
+import Devices.Thermostat;
 
 public class SmartHomeFacade {
-    private Light light;
-    private Thermostat thermostat;
-    private SecuritySystem securitySystem;
+    private final Light light;
+    private final Thermostat thermostat;
+    private final SecuritySystem securitySystem;
 
     public SmartHomeFacade() {
         this.light = new Light();

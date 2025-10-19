@@ -1,10 +1,11 @@
 import Devices.Light;
-import Decorators.SecurityDecorator;
 import Decorators.LoggingDecorator;
+import Decorators.SecurityDecorator;
 import Facade.SmartHomeFacade;
 
 public class Client {
     public static void main(String[] args) {
+
         SmartHomeFacade home = new SmartHomeFacade();
         home.arriveHome();
         home.leaveHome();

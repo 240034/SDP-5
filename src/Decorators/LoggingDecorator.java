@@ -1,25 +1,22 @@
 package Decorators;
 
+import Devices.Device;
+
 public class LoggingDecorator extends DeviceDecorator {
-    public LoggingDecorator(Object device) {
+
+    public LoggingDecorator(Device device) {
         super(device);
     }
 
+    @Override
     public void on() {
         System.out.println("[Log] Turning ON device");
-        try {
-            device.getClass().getMethod("on").invoke(device);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        super.on();
     }
 
+    @Override
     public void off() {
         System.out.println("[Log] Turning OFF device");
-        try {
-            device.getClass().getMethod("off").invoke(device);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        super.off();
     }
 }

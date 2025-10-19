@@ -1,11 +1,13 @@
 package Devices;
 
-public class Light {
-    public void on(){
+public class Light implements Device {
+    @Override
+    public void on() {
         System.out.println("Light on");
     }
 
-    public void off(){
+    @Override
+    public void off() {
         System.out.println("Light off");
     }
 }
