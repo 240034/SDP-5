@@ -3,9 +3,9 @@
 This project demonstrates two structural design patterns in Java: **Facade** and **Decorator**, using a simple **Smart Home** example.
 
 
-## 🔧 Design Patterns Used
+### Design Patterns Used
 
-### ✅ Facade
+### Facade
 The **Facade** pattern provides a simplified interface to a complex system.
 
 In this project, the `SmartHomeFacade` class controls multiple home devices:
@@ -65,21 +65,35 @@ src/
 
 ### Program Output
 --- Arriving Home ---
+
 Security is DISARMED
+
 Light on
+
 Temperature set to 22°C
 
+
 --- Leaving Home ---
+
 Light off
+
 Temperature set to 18°C
+
 Security is ARMED
 
+
 --- Using Decorators ---
+
 [Log] Turning ON device
+
 [Security Check] User verified
+
 Light on
+
 [Log] Turning OFF device
+
 [Security Check] User verified
+
 Light off
 
 ### Purpose
